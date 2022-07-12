@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import  MainFooter  from "../components/mainFooter/MainFooter";
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Smart Comply</title>
         <meta
