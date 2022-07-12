@@ -1,0 +1,57 @@
+/* general styles to be moved to globals */
+.primaryText {
+  color: var(--primary-color);
+}
+.divider {
+  height: 0.5px;
+  width: 100%;
+  background-color: #9c9c9c;
+}
+/* end of general styles */
+
+/* blog list page header component */
+.smScreenBlogNav {
+  background-color: #b7becb1a;
+}
+/* blog list page header component ends */
+/* blog list  */
+.truncatedText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.postMeta small {
+  color: var(--primary-color);
+}
+/* blog list */
+/* footer */
+/* newsletter */
+.blogNewsLetter {
+  background-color: var(--secondary-color);
+}
+.blogNewsLetter h1 {
+  line-height: 50px;
+}
+.blogNewsLetter input {
+  border-color: var(--primary-color);
+}
+.blogNewsLetter input::placeholder {
+  color: #2e2e2e;
+}
+.blogNewsLetter button {
+  transition: background-color 0.5s;
+  background-color: var(--primary-color);
+}
+.blogNewsLetter button:hover {
+  background-color: var(--primary-color-dark);
+}
+/* newsletter ends */
+
+/* copyright */
+.copyright {
+  background-color: var(--bg-footer);
+}
+/* copyright ends */
+/* footer ends */
