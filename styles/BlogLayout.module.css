@@ -11,8 +11,32 @@
 
 /* blog list page header component */
 .smScreenBlogNav {
-  background-color: #b7becb1a;
+  background-color: rgb(236.7, 236, 234.7);
 }
+.dropdownOpen {
+  height: 325px;
+}
+.blueSearchInput {
+  background-color: rgb(236.7, 236, 234.7);
+}
+.blueSearchInput label {
+  border-color: var(--primary-color);
+}
+.blueSearchInput input::placeholder,
+.blueSearchInput svg {
+  color: var(--primary-color);
+}
+/* select */
+.customSelect {
+  /* border: 1px solid; */
+}
+.selectMenu {
+  max-height: 50vh;
+}
+.menuOptions {
+  min-width: 100%;
+}
+/* slect ends */
 /* blog list page header component ends */
 /* blog list  */
 .truncatedText {

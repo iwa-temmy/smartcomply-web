@@ -1,7 +1,7 @@
 import React from "react";
 
 // core components
-import BlogPostsListHeader from "components/blog/BlogPostsListHeader";
+import BlogPostsListHeader from "components/blog/header/BlogPostsListHeader";
 import BlogLayout from "../components/blog/BlogLayout";
 import BlogPostCard from "components/blog/BlogPostCard";
 
