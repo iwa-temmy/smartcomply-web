@@ -26,17 +26,7 @@
 .blueSearchInput svg {
   color: var(--primary-color);
 }
-/* select */
-.customSelect {
-  /* border: 1px solid; */
-}
-.selectMenu {
-  max-height: 50vh;
-}
-.menuOptions {
-  min-width: 100%;
-}
-/* slect ends */
+
 /* blog list page header component ends */
 /* blog list  */
 .truncatedText {
@@ -50,6 +40,14 @@
   color: var(--primary-color);
 }
 /* blog list */
+
+/* blog cards */
+.blogCard img {
+  height: 226px;
+  width: 100%;
+}
+/* blog cards ends */
+
 /* footer */
 /* newsletter */
 .blogNewsLetter {

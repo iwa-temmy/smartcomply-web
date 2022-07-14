@@ -27,7 +27,7 @@ const BlogDropdown = props => {
       }`}
     >
       <div className={`divider ${styles.divider}`} />
-      <nav className="grid py-2">
+      <nav className="grid py-2 h-64 overflow-hidden overflow-y-auto">
         <BlogDropdownItem
           label={defaultValue}
           value=""

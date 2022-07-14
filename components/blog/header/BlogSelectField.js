@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
 import styles from "styles/BlogLayout.module.css";
-import { capitalizeText } from "utils";
+import { capitalizeText, replaceAllInstance } from "utils";
 
 const BlogSelectField = props => {
   const { fields, defaultValue, values, handleSelect } = props;
@@ -38,12 +38,13 @@ const BlogSelectField = props => {
         <p className="text-ellipsis text-left overflow-hidden w-36 whitespace-nowrap text-gray-500 flex items-stretch h-3/5">
           {values.length
             ? values.map((value, index) => {
+                const label = replaceAllInstance("-", " ", value);
                 return (
                   <small
-                    className="mr-1 px-2 flex justify-center items-center bg-slate-50 rounded-2xl h-full"
+                    className="mr-1 px-2 flex justify-center items-center bg-slate-50 rounded-2xl h-full capitalize"
                     key={index}
                   >
-                    {capitalizeText(value)}
+                    {label}
                   </small>
                 );
               })
@@ -52,8 +53,8 @@ const BlogSelectField = props => {
         <BiChevronDown className="ml-2 text-xl font-bold" />
       </button>
       <div
-        className={`menu absolute top-full right-0 z-10 w-full overflow-hidden shadow-xl  ${
-          menuOpen ? styles.selectMenu : "max-h-0"
+        className={`menu absolute top-full right-0 z-10 w-fit overflow-hidden shadow-xl  ${
+          menuOpen ? "max-h-52" : "max-h-0"
         } transition-all duration-500`}
       >
         <div
@@ -63,7 +64,7 @@ const BlogSelectField = props => {
           onClick={closeMenu}
         />
         <div
-          className={`options grid z-50 relative bg-white rounded py-1 overflow-auto h-full ${styles.menuOptions}`}
+          className={`options grid z-50 relative bg-white rounded py-1 w-fit min-w-full  h-52 overflow-y-auto`}
         >
           <SelectOption
             label={defaultValue}
@@ -93,13 +94,13 @@ const SelectOption = props => {
   const { label, active, value, onSelect } = props;
   return (
     <button
-      className={`outline-none text-left py-1 px-3 hover:bg-slate-50 active:bg-slate-100 ${
+      className={`outline-none text-left py-1 px-3 pr-5  hover:bg-slate-50 active:bg-slate-100${
         active ? "bg-slate-100 font-semibold" : ""
-      }`}
+      } whitespace-nowrap capitalize`}
       type="button"
       onClick={() => onSelect(value)}
     >
-      {capitalizeText(label)}
+      {replaceAllInstance("-", " ", label)}
     </button>
   );
 };

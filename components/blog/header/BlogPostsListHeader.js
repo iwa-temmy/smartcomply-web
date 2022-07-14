@@ -13,22 +13,18 @@ import { VscClose } from "react-icons/vsc";
 import styles from "styles/BlogLayout.module.css";
 import BlogDropdown from "./BlogDropdown";
 
-const BlogPostsListHeader = () => {
+const BlogPostsListHeader = props => {
+  const { filters, setFilters, allCategories } = props;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [filter, setFilter] = useState({
-    name: "",
-    categories: []
-  });
 
   // functions
   const handleSearchFilter = e => {
     const { value } = e.target;
-    setFilter(filter => ({ ...filter, name: value }));
+    setFilters(filter => ({ ...filter, name: value }));
   };
   const handleCategoryFilter = values => {
-    console.log(values);
-    setFilter(filter => ({
+    setFilters(filter => ({
       ...filter,
       categories: values
     }));
@@ -42,14 +38,6 @@ const BlogPostsListHeader = () => {
   };
   const closeSearch = () => setSearchOpen(false);
 
-  const all_categories = [
-    "option1",
-    "option2",
-    "option3",
-    "option4",
-    "option5"
-  ];
-
   return (
     <>
       <header className="hidden md:flex justify-between items-center px-10 md:px-20">
@@ -58,9 +46,9 @@ const BlogPostsListHeader = () => {
         </h2>
         <div className={`flex justify-end items-center`}>
           <BlogSelectField
-            fields={all_categories}
+            fields={allCategories}
             defaultValue="all posts"
-            values={filter.categories}
+            values={filters.categories}
             handleSelect={handleCategoryFilter}
           />
           <BlogSearchInput onChange={handleSearchFilter} />
@@ -82,7 +70,7 @@ const BlogPostsListHeader = () => {
               <GrTextAlignLeft className="text-2xl" />
               <span className="ml-2">categories</span>
             </button>
-            <button onClick={openSearch} value={filter.name}>
+            <button onClick={openSearch} value={filters.name}>
               <BiSearch className={`text-2xl ${styles.primaryText}`} />
             </button>
             <div
@@ -95,7 +83,7 @@ const BlogPostsListHeader = () => {
               <BlogSearchInput
                 className="ml-0"
                 onChange={handleSearchFilter}
-                value={filter.name}
+                value={filters.name}
               />
               <button onClick={closeSearch}>
                 <VscClose className="text-4xl ml-2 font-light" />
@@ -104,8 +92,8 @@ const BlogPostsListHeader = () => {
           </div>
           <BlogDropdown
             defaultValue="All Post"
-            fields={all_categories}
-            values={filter.categories}
+            fields={allCategories}
+            values={filters.categories}
             open={dropdownOpen}
             onItemSelect={handleCategoryFilter}
           />
