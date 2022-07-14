@@ -3,7 +3,7 @@ import styles from "../../../styles/Home.module.css";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <section className={`${styles.hero} px-8 lg:px-20`}>
+    <main className={`${styles.hero} px-8 lg:px-20`}>
       <div className="flex items-center flex-col py-5 lg:flex-row lg:py-12">
         <div className="w-full lg:w-11/12">
           <div className="text-white text-3xl lg:text-4xl my-14 text-relaxed">
@@ -15,8 +15,8 @@ const Hero = () => {
             cost-effective and easier with our simple but powerful compliance
             automation solution
           </p>
-          <div className="flex items-center lg:items-start">
-            <Button name="schedule a free demo" />
+          <div className="flex justify-center lg:justify-start">
+            <Button name="schedule a free demo" styles={styles.button}/>
           </div>
         </div>
         <div className="w-full">
@@ -24,11 +24,12 @@ const Hero = () => {
             src="/hero.svg"
             width="1000"
             height="900"
+            alt="SmartcomplyApp Dashboard"
             layout="responsive"
           />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

@@ -16,11 +16,11 @@ const AuditProcess = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:p-6 lg:justify-items-center lg:mb-5">
         {auditsProcesses?.map((process) => {
           return (
-            <div className="border-2 h-80 rounded-2xl p-4 lg:px-8 lg:py-4 lg:h-64 lg:h-80">
+            <div className="border-2 h-80 rounded-2xl p-4 lg:px-8 lg:py-4 lg:h-64 lg:h-80" key={process?.id}>
               <div className="mt-0">
-                <Image src={process?.image} width="300" height="100" />
+                <Image src={process?.image} alt={process?.name}width="300" height="100" />
               </div>
-              <p className="mt-4">{process?.description}</p>
+              <p className="mt-4 text-semibold">{process?.description}</p>
             </div>
           );
         })}

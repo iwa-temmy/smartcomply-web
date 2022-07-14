@@ -4,7 +4,7 @@ import Button from "../../button/Button";
 
 const Infrastructures = () => {
   return (
-    <section className="w-full my-12 py-12 px-4 lg:px-20">
+    <section className="w-full my-12 py-10 px-4 lg:px-20 lg:py-14">
       <div className="flex justify-between flex-col items-center md:flex-row lg:flex-row px-5">
         <div className="w-full">
           <p
@@ -12,9 +12,14 @@ const Infrastructures = () => {
           >
             Connect our Infrastructure and application for continuous Monitoring
           </p>
-          <Button name="schedule a free demo" styles={styles.infrastructureButton} />
+          <div className="flex justify-center lg:justify-start">
+            <Button
+              name="schedule a free demo"
+              styles={styles.infrastructureButton}
+            />
+          </div>
         </div>
-        <div className="w-11/12">
+        <div className="w-full mt-8 lg:w-11/12 lg:mt-0">
           {/* <div className="flex justify-between items-end lg:flex-row">
             <div className="p-5 border h-32 rounded-2xl shadow-xl shadow-gray-400">
               <Image src="/aws-logo.svg" alt="Aws" width={100} height={80} />
@@ -58,7 +63,7 @@ const Infrastructures = () => {
               />
             </div>
           </div> */}
-          <Image src="/infrastructures.svg" width="620" height="600" />
+          <Image src="/infrastructures.svg" alt="infrastructures" width="620" height="600" />
         </div>
       </div>
     </section>

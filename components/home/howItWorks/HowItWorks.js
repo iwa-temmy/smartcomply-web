@@ -2,7 +2,9 @@ import styles from "../../../styles/Home.module.css";
 import Image from "next/image";
 export default function HowItWorks() {
   return (
-    <section className={`${styles.how_it_works} px-8 lg:py-12 lg:px-20`}>
+    <section
+      className={`${styles.how_it_works} p-8 font-semibold lg:py-12 lg:px-20`}
+    >
       <p className="text-center">How It Works</p>
       <div className="my-12">
         <article className="flex justify-between items-center flex-col lg:flex-row">
@@ -17,7 +19,7 @@ export default function HowItWorks() {
           <div className="w-full lg:w-11/12">
             <h2 className="capitalize text-3xl my-5">Get Onboarded</h2>
             <p className="w-10/12">
-              With SMARTCOMPLY'S technical compliance advisors, you can enjoy
+              With SMARTCOMPLY&apos;S technical compliance advisors, you can enjoy
               seamless onboarding and pre-audit of your infrastructure for FREE.
               This one time support helps you acquainted with the platform
               through a hand-held process by our advisors.
@@ -68,10 +70,9 @@ export default function HowItWorks() {
           <div className="w-full lg:w-11/12">
             <h2 className="capitalize text-3xl my-5">Get Notified Of Audit</h2>
             <p className="w-full lg:w-10/12">
-              With SMARTCOMPLY'S technical compliance advisors, you can enjoy
-              seamless onboarding and pre-audit of your infrastructure for FREE.
-              This one time support helps you acquainted with the platform
-              through a hand-held process by our advisors.
+              With access to numerous partner auditors, based on your compliance
+              status, smart comply tells you which audit you are ready for and
+              manages your audit timeline.
             </p>
           </div>
           <div className="w-full my-10">
