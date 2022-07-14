@@ -1,10 +1,11 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 //Components
-import Nav from "../components/nav/Nav";
-import Hero from "../components/hero/Hero";
-import MainFooter from "../components/homeFooter/MainFooter";
-import AuditProcess from "../components/auditProcess/AuditProcess";
+import Nav from "../components/home/nav/Nav";
+import Hero from "../components/home/hero/Hero";
+import MainFooter from "../components/home/footer/MainFooter";
+import AuditProcess from "../components/home/auditProcess/AuditProcess";
+import Infrastructures from "../components/home/Infrastructures/Infrastructures";
+import HowItWorks from "../components/home/howItWorks/HowItWorks";
 export default function Home() {
   return (
     <div>
@@ -20,9 +21,10 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-    
-      <Nav styles={styles}/>
+      <Nav/>
       <Hero />
+      <HowItWorks />
+      <Infrastructures />
       <AuditProcess />
       <MainFooter />
     </div>

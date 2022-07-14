@@ -1,9 +1,9 @@
-import styles from "../../styles/Home.module.css";
-import { auditsProcesses } from "../../data";
+import styles from "../../../styles/Home.module.css";
+import { auditsProcesses } from "../../../data";
 //Components
 
 import Image from "next/image";
-import Button from "../button/Button";
+import Button from "../../button/Button";
 const AuditProcess = () => {
   return (
     <section
@@ -13,10 +13,10 @@ const AuditProcess = () => {
       }
     >
       <h3 className="mt-4 mb-7 text-center">Simplify your audit process</h3>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:p-6 lg:justify-items-center lg:mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:p-6 lg:justify-items-center lg:mb-5">
         {auditsProcesses?.map((process) => {
           return (
-            <div className="border-2 h-80 rounded-2xl p-4 lg:px-8 lg:py-4 lg:h-64">
+            <div className="border-2 h-80 rounded-2xl p-4 lg:px-8 lg:py-4 lg:h-64 lg:h-80">
               <div className="mt-0">
                 <Image src={process?.image} width="300" height="100" />
               </div>
@@ -26,7 +26,7 @@ const AuditProcess = () => {
         })}
       </div>
       <div className="flex justify-center my-16">
-        <Button name="schedule a free demo" styles={styles} />
+        <Button name="schedule a free demo" styles={styles?.button} />
       </div>
 
       <div>

@@ -6,8 +6,35 @@
 .button{
   color: #0E2C66;
 }
+.hero{
+  background-color:  #0E2C66;
+  font-weight: 600;
+  height: 88vh;
+}
 
 .audit_process{
   background-color:  #0E2C66;
   font-weight: 600;
+}
+
+.infrastructureButton{
+  background-color: #0E2C66;
+  color: #fff;
+}
+
+.infrastructure_description{
+  color: #0E2C66;
+  font-weight: 500;
+}
+
+.how_it_works{
+  background-color: rgba(5, 222, 236, 0.3);
+  color: #0E2C66;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero{
+    height: 95vh;
+  }
 }
