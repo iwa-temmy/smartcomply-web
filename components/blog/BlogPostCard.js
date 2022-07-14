@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 // utils
 import {
@@ -11,7 +12,7 @@ import {
 import styles from "styles/BlogLayout.module.css";
 
 const BlogPostCard = props => {
-  const { post } = props;
+  const { post, id } = props;
 
   // hooks
   const elementRef = useRef();
@@ -53,9 +54,9 @@ const BlogPostCard = props => {
         <h4 className="font-semibold text-lg leading-5 py-2">{post.title}</h4>
         <span className="self-end">
           <span className={`mt-2 mr-2`}>{truncateText(description, 70)}</span>
-          <a href="#" className={styles.primaryText}>
-            read more
-          </a>
+          <Link href="/blog/posts/[id]" as={`/blog/posts/${id}`}>
+            <a className={styles.primaryText}>read more</a>
+          </Link>
         </span>
       </div>
     </>

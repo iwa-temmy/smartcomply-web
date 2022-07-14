@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // blog compoenents
 import BlogSearchInput from "./BlogSearchInput";
-import BlogDropdownItem from "./BlogDropdownItem";
 import BlogSelectField from "./BlogSelectField";
 
 // icons
