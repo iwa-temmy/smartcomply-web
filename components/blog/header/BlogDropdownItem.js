@@ -1,4 +1,5 @@
 import React from "react";
+import { replaceAllInstance } from "utils";
 
 import styles from "styles/BlogLayout.module.css";
 
@@ -11,7 +12,7 @@ const BlogDropdownItem = props => {
       }`}
       onClick={() => onSelect(value)}
     >
-      {label}
+      {replaceAllInstance("-", " ", label)}
     </button>
   );
 };

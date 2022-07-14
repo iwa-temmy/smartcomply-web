@@ -26,17 +26,7 @@
 .blueSearchInput svg {
   color: var(--primary-color);
 }
-/* select */
-.customSelect {
-  /* border: 1px solid; */
-}
-.selectMenu {
-  max-height: 50vh;
-}
-.menuOptions {
-  min-width: 100%;
-}
-/* slect ends */
+
 /* blog list page header component ends */
 /* blog list  */
 .truncatedText {
@@ -50,6 +40,68 @@
   color: var(--primary-color);
 }
 /* blog list */
+
+/* blog cards */
+.blogCard img {
+  height: 226px;
+  width: 100%;
+}
+/* blog cards ends */
+
+/* FOR EACH POST PAGE */
+/* header */
+.shareBar {
+  top: 15%;
+}
+.postContent h3 {
+  display: none;
+}
+.postContent > p {
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.postContent p:nth-child(1) {
+  background-color: red;
+}
+.postContent p strong {
+  padding: 1.5rem 0;
+}
+.postContent img {
+  margin: 0rem auto;
+  padding: 2rem 0.7rem;
+  max-width: 80%;
+}
+.postContent img[height="1"] {
+  display: none;
+}
+.postContent ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  padding: 0.5rem 0rem 0.5rem 1.8rem;
+}
+.postContent ul li {
+  padding: 0.5rem 0;
+}
+.postContent a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .postContent img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 0;
+  }
+}
+
+/* END PF POST PAGE STYLES */
+
 /* footer */
 /* newsletter */
 .blogNewsLetter {
