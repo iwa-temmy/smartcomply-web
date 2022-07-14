@@ -16,7 +16,7 @@ export default function Nav() {
       className={`${styles.nav} flex flex-col relative lg:px-20 lg:py-4 lg:flex-row lg:justify-between`}
     >
       <div className="py-2 px-5 flex justify-between lg:p-3">
-        <Image src="/logo.svg" alt="logo" width={120} height={50} />
+        <Image src="/logo-white.svg" alt="logo" width={120} height={50} />
         <div className="flex lg:hidden">
           <Button
             name={<GiHamburgerMenu color="#0C2356" size="24px" />}

@@ -1,0 +1,133 @@
+/* general styles to be moved to globals */
+.primaryText {
+  color: var(--primary-color);
+}
+.divider {
+  height: 0.5px;
+  width: 100%;
+  background-color: #9c9c9c;
+}
+/* end of general styles */
+
+/* blog list page header component */
+.smScreenBlogNav {
+  background-color: rgb(236.7, 236, 234.7);
+}
+.dropdownOpen {
+  height: 325px;
+}
+.blueSearchInput {
+  background-color: rgb(236.7, 236, 234.7);
+}
+.blueSearchInput label {
+  border-color: var(--primary-color);
+}
+.blueSearchInput input::placeholder,
+.blueSearchInput svg {
+  color: var(--primary-color);
+}
+
+/* blog list page header component ends */
+/* blog list  */
+.truncatedText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.postMeta small {
+  color: var(--primary-color);
+}
+/* blog list */
+
+/* blog cards */
+.blogCard img {
+  height: 226px;
+  width: 100%;
+}
+/* blog cards ends */
+
+/* FOR EACH POST PAGE */
+/* header */
+.shareBar {
+  top: 15%;
+}
+.postContent h3 {
+  display: none;
+}
+.postContent > p {
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.postContent p:nth-child(1) {
+  background-color: red;
+}
+.postContent p strong {
+  padding: 1.5rem 0;
+}
+.postContent img {
+  margin: 0rem auto;
+  padding: 2rem 0.7rem;
+  max-width: 80%;
+}
+.postContent img[height="1"] {
+  display: none;
+}
+.postContent ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  padding: 0.5rem 0rem 0.5rem 1.8rem;
+}
+.postContent ul li {
+  padding: 0.5rem 0;
+}
+.postContent a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .postContent img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 0;
+  }
+}
+
+/* END PF POST PAGE STYLES */
+
+/* footer */
+/* newsletter */
+.blogNewsLetter {
+  background-color: var(--secondary-color);
+}
+.blogNewsLetter h1 {
+  line-height: 50px;
+}
+.blogNewsLetter input {
+  border-color: var(--primary-color);
+}
+.blogNewsLetter input::placeholder {
+  color: #2e2e2e;
+}
+.blogNewsLetter button {
+  transition: background-color 0.5s;
+  background-color: var(--primary-color);
+}
+.blogNewsLetter button:hover {
+  background-color: var(--primary-color-dark);
+}
+/* newsletter ends */
+
+/* copyright */
+.copyright {
+  background-color: var(--bg-footer);
+}
+/* copyright ends */
+/* footer ends */

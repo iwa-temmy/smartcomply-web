@@ -4,12 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #0e2c66;
+  --bg-footer: #313f59;
+  --primary-color-dark: #162540;
+  --secondary-color: #d1defc;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
