@@ -26,11 +26,11 @@ export default function Nav() {
         </div>
       </div>
       <nav
-        className={
+        className={`${
           navToggle
-            ? "navbar flex flex-col bg-slate-500 pt-3 w-full top-24 absolute items-center lg:flex lg:flex-row lg:items-center h-80 lg:bg-inherit"
-            : "hidden flex-col bg-slate-500 items-center lg:flex lg:flex-row lg:items-center lg:bg-inherit"
-        }
+            ? "pt-3 w-full translate-x-0"
+            : "-translate-x-full flex-col bg-slate-500"
+        } flex flex-col bg-slate-500 transition-all duration-100 absolute top-24 h-80 lg:flex lg:flex-row items-center lg:bg-inherit lg:relative lg:top-0 lg:h-fit lg:translate-x-0 lg:items-end`}
       >
         <span className="my-8 lg:mr-10 text-white uppercase lg:my-4">
           <Link href="https://app.smartcomplyapp.com/auth/login">Sign in</Link>

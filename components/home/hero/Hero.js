@@ -3,7 +3,7 @@ import styles from "../../../styles/Home.module.css";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <main className={`${styles.hero} px-8 lg:px-20`}>
+    <main className={`${styles.hero} px-8 lg:px-20 -mt-1`}>
       <div className="flex items-center flex-col py-5 lg:flex-row lg:py-12">
         <div className="w-full lg:w-11/12">
           <div className="text-white text-3xl lg:text-4xl my-14 text-relaxed">
