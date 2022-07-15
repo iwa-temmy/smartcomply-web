@@ -7,7 +7,7 @@ export default function HowItWorks() {
     >
       <p className="text-center">How It Works</p>
       <div className="my-12">
-        <article className="flex justify-between items-center flex-col lg:flex-row">
+        <article className="flex justify-between items-center flex-col md:flex-row">
           <div className="w-full my-10">
             <Image
               src="/onboarding.svg"
@@ -18,7 +18,7 @@ export default function HowItWorks() {
           </div>
           <div className="w-full lg:w-11/12">
             <h2 className="capitalize text-3xl my-5">Get Onboarded</h2>
-            <p className="w-10/12">
+            <p className="w-full md:w-10/12">
               With SMARTCOMPLY&apos;S technical compliance advisors, you can enjoy
               seamless onboarding and pre-audit of your infrastructure for FREE.
               This one time support helps you acquainted with the platform
@@ -26,7 +26,7 @@ export default function HowItWorks() {
             </p>
           </div>
         </article>
-        <article className="flex justify-between items-center flex-col-reverse lg:flex-row">
+        <article className="flex justify-between items-center flex-col-reverse md:flex-row">
           <div className="w-11/12">
             <h2 className="capitalize text-3xl my-5">
               Connect Your Technology Stack
@@ -46,7 +46,7 @@ export default function HowItWorks() {
             />
           </div>
         </article>
-        <article className="flex justify-between items-center flex-col lg:flex-row">
+        <article className="flex justify-between items-center flex-col md:flex-row">
           <div className="w-full my-10">
             <Image
               src="/server-status.svg"
@@ -66,7 +66,7 @@ export default function HowItWorks() {
             </p>
           </div>
         </article>
-        <article className="flex justify-between flex-col-reverse items-center lg:flex-row">
+        <article className="flex justify-between flex-col-reverse items-center md:flex-row">
           <div className="w-full lg:w-11/12">
             <h2 className="capitalize text-3xl my-5">Get Notified Of Audit</h2>
             <p className="w-full lg:w-10/12">

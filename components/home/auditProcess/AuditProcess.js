@@ -4,7 +4,7 @@ import { auditsProcesses } from "../../../data";
 
 import Image from "next/image";
 import Button from "../../button/Button";
-const AuditProcess = () => {
+const AuditProcess = ({openModal}) => {
   return (
     <section
       className={
@@ -26,7 +26,7 @@ const AuditProcess = () => {
         })}
       </div>
       <div className="flex justify-center my-16">
-        <Button name="schedule a free demo" styles={styles?.button} />
+        <Button name="schedule a free demo" styles={styles?.button} buttonAction={openModal}/>
       </div>
 
       <div>
