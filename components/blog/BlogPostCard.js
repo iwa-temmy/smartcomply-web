@@ -73,6 +73,7 @@ const BlogPostCard = props => {
           <img
             src={getImageURL(post.thumbnail) || "/blogImage.png"}
             className="w-full block h-56 object-cover "
+            alt="post image"
           />
           <div
             className={`text-xs flex justify-between font-semibold mt-2 mb-1 ${styles.primaryText}`}

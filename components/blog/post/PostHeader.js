@@ -37,7 +37,7 @@ const PostHeader = props => {
             categories[0]
           } &url=${linkToPost}&hashtags=${categories.join(",")}`}
           target="_blank"
-          rel="noreferer"
+          rel="noreferrer"
         >
           <BsTwitter />
         </a>
@@ -45,7 +45,7 @@ const PostHeader = props => {
           href={`https://www.facebook.com/sharer/sharer.php?u=${linkToPost}&amp;src=sdkpreparse`}
           className="m-1 p-1 text-xl"
           target="_blank"
-          rel="noreferer"
+          rel="noreferrer"
         >
           <FaFacebookF />
         </a>
@@ -53,7 +53,7 @@ const PostHeader = props => {
           href={`whatsapp://send?text=Check out this article: ${linkToPost} `}
           className="m-1 p-1 text-xl"
           target="_blank"
-          rel="noreferer"
+          rel="noreferrer"
         >
           <RiWhatsappFill />
         </a>
@@ -64,7 +64,7 @@ const PostHeader = props => {
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${linkToPost}&title=${title}&summary=&source=SmartComplyApp`}
           className="m-1 p-1 text-xl"
           target="_blank"
-          rel="noreferer"
+          rel="noreferrer"
         >
           <FaLinkedinIn />
         </a>
