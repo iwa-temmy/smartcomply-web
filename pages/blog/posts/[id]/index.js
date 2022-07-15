@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 // core components
@@ -7,14 +8,37 @@ import PostHeader from "components/blog/post/PostHeader";
 import BlogPostCard from "components/blog/BlogPostCard";
 
 import styles from "styles/BlogLayout.module.css";
+import Breadcrumbs from "components/Breadcrumbs";
+import { truncateText } from "utils";
 
 const Post = props => {
   const router = useRouter();
   const { post, other_posts } = props;
 
+  const breadcrumbRoutes = [
+    {
+      href: "/blog",
+      label: "Blog"
+    },
+    {
+      href: `/blog/posts/${router.query.id}`,
+      label: truncateText(post.title, 20)
+    }
+  ];
+
   return (
     <BlogLayout title={post.title}>
-      <main className="px-3 py-2 md:py-8 md:px-20 relative">
+      <motion.main
+        className="px-3 py-2 md:py-8 md:px-20 relative"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { y: "10vh", opacity: 0 },
+          visible: { y: 0, opacity: 1 }
+        }}
+        transition={{ duration: 0.8 }}
+      >
+        <Breadcrumbs routes={breadcrumbRoutes} />
         <PostHeader
           title={post.title}
           categories={post.categories}
@@ -38,7 +62,7 @@ const Post = props => {
             })}
           </div>
         </section>
-      </main>
+      </motion.main>
     </BlogLayout>
   );
 };
