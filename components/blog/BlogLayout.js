@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import BlogFooter from "./BlogFooter";
 import BlogHeadComponent from "./BlogHeadComponent";
@@ -9,12 +10,18 @@ import styles from "styles/BlogLayout.module.css";
 const BlogLayout = props => {
   const { children, title } = props;
   return (
-    <div className={styles.bloglayout}>
+    <motion.div
+      className={styles.bloglayout}
+      initial="hidden"
+      animate="visible"
+      variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+      transition={{ duration: 0.8 }}
+    >
       <BlogHeadComponent title={title} />
       <BlogHeader />
       {children}
       <BlogFooter />
-    </div>
+    </motion.div>
   );
 };
 
