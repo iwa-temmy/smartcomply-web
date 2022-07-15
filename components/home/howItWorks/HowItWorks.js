@@ -5,7 +5,7 @@ export default function HowItWorks() {
     <section
       className={`${styles.how_it_works} p-8 font-semibold lg:py-12 lg:px-20`}
     >
-      <div>
+      <div data-aos="fade-down">
         <p className="text-center">How It Works</p>
         <div className="my-12">
           <article className="flex justify-between items-center flex-col md:flex-row">
@@ -18,7 +18,7 @@ export default function HowItWorks() {
               />
             </div>
             <div className="w-full lg:w-11/12">
-              <h2 className="capitalize text-2xl md:text-3xl my-5">
+              <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Get Onboarded
               </h2>
               <p className="w-full md:w-10/12">
@@ -31,8 +31,8 @@ export default function HowItWorks() {
           </article>
           <article className="flex justify-between items-center flex-col-reverse md:flex-row">
             <div className="w-11/12">
-              <h2 className="capitalize text-2xl md:text-3xl my-5">
-                Connect Your Technology Stack
+              <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
+                Connect Your <br /> Technology Stack
               </h2>
               <p className="w-full lg:w-10/12">
                 Integrate all your technology stack into SMARTCOMPLY and allow
@@ -59,7 +59,7 @@ export default function HowItWorks() {
               />
             </div>
             <div className="w-full lg:w-11/12">
-              <h2 className="capitalize text-2xl md:text-3xl my-5">
+              <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Track The Status Of Your Compliance
               </h2>
               <p className="w-full lg:w-10/12">
@@ -71,7 +71,7 @@ export default function HowItWorks() {
           </article>
           <article className="flex justify-between flex-col-reverse items-center md:flex-row">
             <div className="w-full lg:w-11/12">
-              <h2 className="capitalize text-2xl md:text-3xl my-5">
+              <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Get Notified Of Audit
               </h2>
               <p className="w-full lg:w-10/12">

@@ -10,7 +10,7 @@ import HowItWorks from "../components/home/howItWorks/HowItWorks";
 import Features from "../components/home/features/Features";
 import RequestDemoModal from "components/modal/RequestDemoModal";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
-import AOS from 'aos';
+import AOS from "aos";
 export default function Home() {
   const [modal, setModal] = useState(false);
 
@@ -22,8 +22,12 @@ export default function Home() {
   }
 
   useEffect(() => {
-    AOS.init();
-  }, [])
+    AOS.init({
+      delay: 300, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease-in-out", // default easing for AOS animations
+    });
+  }, []);
   return (
     <div>
       <Head>
@@ -42,8 +46,8 @@ export default function Home() {
       <Hero openModal={openDemoFormModal} />
       <Features openModal={openDemoFormModal} />
       <HowItWorks />
-      <Infrastructures openModal={openDemoFormModal}/>
-      <AuditProcess openModal={openDemoFormModal}/>
+      <Infrastructures openModal={openDemoFormModal} />
+      <AuditProcess openModal={openDemoFormModal} />
       <MainFooter />
       <TawkMessengerReact
         propertyId="62602fc8b0d10b6f3e6e8294"

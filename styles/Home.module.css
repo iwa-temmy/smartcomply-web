@@ -5,16 +5,15 @@
 
 .button{
   color: #0E2C66;
+  font-weight: 600;
 }
 .hero{
   background-color:  #0E2C66;
-  font-weight: 600;
   height: 88vh;
 }
 
 .audit_process{
   background-color:  #0E2C66;
-  font-weight: 600;
 }
 
 .infrastructureButton{
@@ -30,7 +29,6 @@
 .how_it_works{
   background-color: rgba(5, 222, 236, 0.3);
   color: #0E2C66;
-  font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
