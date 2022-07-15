@@ -62,7 +62,7 @@ const BlogPostCard = props => {
       <motion.span
         animate={animationControl}
         ref={animationRef}
-        initial={{ y: "10vh", opacity: 0 }}
+        initial={{ y: "5vh", opacity: 0 }}
       >
         <div
           dangerouslySetInnerHTML={{ __html: post.description }}
