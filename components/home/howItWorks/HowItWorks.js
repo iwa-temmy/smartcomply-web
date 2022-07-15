@@ -17,11 +17,11 @@ export default function HowItWorks() {
                 height="350"
               />
             </div>
-            <div className="w-full lg:w-11/12">
+            <div className="w-full lg:pl-10">
               <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Get Onboarded
               </h2>
-              <p className="w-full md:w-10/12">
+              <p className="w-full lg:w-[90%]">
                 With SMARTCOMPLY&apos;S technical compliance advisors, you can
                 enjoy seamless onboarding and pre-audit of your infrastructure
                 for FREE. This one time support helps you acquainted with the
@@ -30,11 +30,11 @@ export default function HowItWorks() {
             </div>
           </article>
           <article className="flex justify-between items-center flex-col-reverse md:flex-row">
-            <div className="w-11/12">
+            <div className="w-11/12 md: w-full">
               <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Connect Your <br /> Technology Stack
               </h2>
-              <p className="w-full lg:w-10/12">
+              <p className="w-full lg:w-[90%]">
                 Integrate all your technology stack into SMARTCOMPLY and allow
                 the platform continuously monitor your infrastructure and
                 collect evidence for compliance
@@ -45,7 +45,8 @@ export default function HowItWorks() {
                 src="/technology.svg"
                 alt="onboarding"
                 width="450"
-                height="300"
+                height="200"
+                layout="responsive"
               />
             </div>
           </article>
@@ -58,7 +59,7 @@ export default function HowItWorks() {
                 height="350"
               />
             </div>
-            <div className="w-full lg:w-11/12">
+            <div className="w-full lg:w-[90%]">
               <h2 className="capitalize text-2xl md:text-3xl my-5 font-medium">
                 Track The Status Of Your Compliance
               </h2>

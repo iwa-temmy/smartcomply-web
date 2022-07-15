@@ -1,6 +1,5 @@
 import Button from "../../button/Button";
 import styles from "../../../styles/Home.module.css";
-import Image from "next/image";
 const Hero = ({openModal}) => {
   return (
     <main className={`${styles.hero} px-8 lg:px-20 -mt-1`}>
@@ -20,9 +19,9 @@ const Hero = ({openModal}) => {
           </div>
         </div>
         <div className="w-full -ml-10">
-          <Image
+          <img
             src="/hero.svg"
-            width="1000"
+            width="900"
             height="900"
             alt="SmartcomplyApp Dashboard"
             layout="responsive"
