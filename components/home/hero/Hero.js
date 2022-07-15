@@ -6,7 +6,7 @@ const Hero = ({openModal}) => {
     <main className={`${styles.hero} px-8 lg:px-20 -mt-1`}>
       <div className="flex items-center flex-col py-0 md:py-5 lg:flex-row lg:py-12">
         <div className="w-full lg:w-11/12">
-          <div className="text-white text-2xl md:text-4xl text-center lg:text-4xl my-8 md:my-14 text-relaxed lg:text-left">
+          <div className="text-white text-3xl md:text-4xl text-center lg:text-4xl my-8 md:my-14 text-relaxed lg:text-left">
             <h2 className="my-5 md:my-6">Faster Compliance</h2>
             <h2>For Smart Businesses</h2>
           </div>

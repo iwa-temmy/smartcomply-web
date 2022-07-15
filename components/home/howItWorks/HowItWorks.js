@@ -17,7 +17,7 @@ export default function HowItWorks() {
             />
           </div>
           <div className="w-full lg:w-11/12">
-            <h2 className="capitalize text-3xl my-5">Get Onboarded</h2>
+            <h2 className="capitalize text-2xl md:text-3xl my-5">Get Onboarded</h2>
             <p className="w-full md:w-10/12">
               With SMARTCOMPLY&apos;S technical compliance advisors, you can enjoy
               seamless onboarding and pre-audit of your infrastructure for FREE.
@@ -28,7 +28,7 @@ export default function HowItWorks() {
         </article>
         <article className="flex justify-between items-center flex-col-reverse md:flex-row">
           <div className="w-11/12">
-            <h2 className="capitalize text-3xl my-5">
+            <h2 className="capitalize text-2xl md:text-3xl my-5">
               Connect Your Technology Stack
             </h2>
             <p className="w-full lg:w-10/12">
@@ -56,7 +56,7 @@ export default function HowItWorks() {
             />
           </div>
           <div className="w-full lg:w-11/12">
-            <h2 className="capitalize text-3xl my-5">
+            <h2 className="capitalize text-2xl md:text-3xl my-5">
               Track The Status Of Your Compliance
             </h2>
             <p className="w-full lg:w-10/12">
@@ -68,7 +68,7 @@ export default function HowItWorks() {
         </article>
         <article className="flex justify-between flex-col-reverse items-center md:flex-row">
           <div className="w-full lg:w-11/12">
-            <h2 className="capitalize text-3xl my-5">Get Notified Of Audit</h2>
+            <h2 className="capitalize text-2xl md:text-3xl my-5">Get Notified Of Audit</h2>
             <p className="w-full lg:w-10/12">
               With access to numerous partner auditors, based on your compliance
               status, smart comply tells you which audit you are ready for and
