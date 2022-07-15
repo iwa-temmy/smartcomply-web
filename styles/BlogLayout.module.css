@@ -62,8 +62,9 @@
   font-weight: 500;
   line-height: 1.8;
 }
-.postContent p:nth-child(1) {
-  background-color: red;
+.postContent p:first-child::first-letter {
+  font-size: 2rem;
+  font-weight: 500;
 }
 .postContent p strong {
   padding: 1.5rem 0;
