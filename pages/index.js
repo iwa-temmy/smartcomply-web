@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //Components
 import Nav from "../components/home/nav/Nav";
 import Hero from "../components/home/hero/Hero";
@@ -10,6 +10,7 @@ import HowItWorks from "../components/home/howItWorks/HowItWorks";
 import Features from "../components/home/features/Features";
 import RequestDemoModal from "components/modal/RequestDemoModal";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import AOS from 'aos';
 export default function Home() {
   const [modal, setModal] = useState(false);
 
@@ -19,6 +20,10 @@ export default function Home() {
   function closeDemoFormModal() {
     setModal(false);
   }
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div>
       <Head>

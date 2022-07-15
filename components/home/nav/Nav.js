@@ -16,8 +16,8 @@ export default function Nav({openModal}) {
   }
 
   const openRequestDemoModal = () => {
-    openModal()
-    closeMenu()
+    openModal();
+    closeMenu();
   }
   return (
     <header

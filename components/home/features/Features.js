@@ -5,8 +5,7 @@ import styles from "../../../styles/Home.module.css";
 import Image from "next/image";
 import Glide from "@glidejs/glide";
 import Button from "../../button/Button";
-import { motion } from "framer-motion";
-const Features = ({openModal}) => {
+const Features = ({ openModal }) => {
   useEffect(() => {
     const glide = new Glide(".glide", {
       type: "slider",
@@ -27,12 +26,8 @@ const Features = ({openModal}) => {
     glide.mount();
   }, []);
   return (
-    <section className="px-8 py-8 font-semibold lg:px-20" >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true}}
-      >
+    <section className="px-8 py-8 font-semibold lg:px-20">
+      <div data-aos="fade-down">
         <p className={`${styles.infrastructure_description} text-center`}>
           Fast-growing brands that trust us
         </p>
@@ -126,7 +121,7 @@ const Features = ({openModal}) => {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
