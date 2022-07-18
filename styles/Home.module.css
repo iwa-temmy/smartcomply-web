@@ -1,40 +1,44 @@
-.nav{
-  background-color:  #0E2C66;
+.nav {
   font-weight: 600;
 }
 
-.button{
-  color: #0E2C66;
+.button {
+  color: #0e2c66;
 }
-.hero{
-  background-color:  #0E2C66;
+.hero {
   font-weight: 600;
-  height: 88vh;
+  padding-top: 100px;
+  background-image: url("../public/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 95vh;
 }
 
-.audit_process{
-  background-color:  #0E2C66;
+.audit_process {
+  background-color: #0e2c66;
   font-weight: 600;
 }
 
-.infrastructureButton{
-  background-color: #0E2C66;
+.infrastructureButton {
+  background-color: #0e2c66;
   color: #fff;
 }
 
-.infrastructure_description{
-  color: #0E2C66;
+.infrastructure_description {
+  color: #0e2c66;
   font-weight: 600;
 }
 
-.how_it_works{
+.how_it_works {
   background-color: rgba(5, 222, 236, 0.3);
-  color: #0E2C66;
+  color: #0e2c66;
   font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
-  .hero{
+  /* .hero {
     height: 95vh;
-  }
+  } */
 }
