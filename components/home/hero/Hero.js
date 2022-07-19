@@ -51,10 +51,13 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={{
-            hidden: { opacity: 0, y: "15vh" },
-            visible: { opacity: 1, y: 0 }
+            hidden: { y: "-3vh", opacity: 0 },
+            visible: { y: 0, opacity: 1 }
           }}
-          transition={{ duration: 1, delay: 2 }}
+          transition={{
+            y: { type: "spring", bounce: 1, duration: 3, delay: 2 },
+            opacity: { type: "tween", duration: 0.5, delay: 2 }
+          }}
         >
           <Image
             src="/hero.svg"
