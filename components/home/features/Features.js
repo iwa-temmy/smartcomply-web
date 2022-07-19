@@ -1,88 +1,98 @@
-import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 import styles from "../../../styles/Home.module.css";
-import Glide from "@glidejs/glide";
 import Button from "../../button/Button";
+import PartnerLogo from "./PartnerLogo";
+
 const Features = () => {
-  useEffect(() => {
-    const glide = new Glide(".glide", {
-      type: "slider",
-      startAt: 0,
-      perView: 4,
-      gap: 30,
-      autoplay: 900,
-      breakpoints: {
-        600: {
-          perView: 3,
-        },
-      },
-    });
-    glide.update({
-      rewindDuration: 0,
-      autoplay: 2500,
-    });
-    glide.mount();
-  }, []);
+  // animation controls
+  const imageControls = useAnimation();
+
+  // animation functions
+  const handleImageAnimations = () => {
+    const onEnterViewport = () => {
+      console.log("entering viewport");
+      imageControls.start({
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+          type: "tween",
+          duration: 1
+        }
+      });
+    };
+    const onLeaveViewport = entry => {
+      console.log("leaving viewport");
+      const y = entry?.boundingClientRect?.y > 0 ? "96px" : "-96px";
+      imageControls.start({
+        opacity: 0,
+        y,
+        x: "-10vh",
+        transition: {
+          type: "tween",
+          duration: 1
+        }
+      });
+    };
+    return { onEnterViewport, onLeaveViewport };
+  };
   return (
-    <section className="px-8 py-8 font-semibold lg:px-20">
-      <p className={`${styles.infrastructure_description} text-center`}>
+    <section className="px-8 py-8 font-semibold lg:px-20 container">
+      <motion.h3
+        className={`${styles.infrastructure_description} text-center text-lg font-medium md:text-xl`}
+        initial={{ opacity: 0, x: "-5vw" }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            type: "tween",
+            duration: 1
+          }
+        }}
+      >
         Fast-growing brands that trust us
-      </p>
-      <div className="relative w-full">
-        <div className="glide">
-          <div
-            className="glide__track"
-            data-glide-el="track"
-            data-glide-dir="{pattern}"
-          >
-            <ul className="glide__slides">
-              <li className="glide__slide">
-                <Image
-                  src="/simplify-logo.svg"
-                  alt="simplify"
-                  width="150"
-                  height="100"
-                />
-              </li>
-              <li className="glide__slide">
-                <Image
-                  src="/appzone-logo.svg"
-                  alt="appzone"
-                  width="150"
-                  height="100"
-                />
-              </li>
-              <li className="glide__slide">
-                <Image
-                  src="/pennytree-logo.svg"
-                  alt="pennytree"
-                  width="150"
-                  height="100"
-                />
-              </li>
-              <li className="glide__slide">
-                <Image
-                  src="/3line-logo.svg"
-                  alt="3line"
-                  width="150"
-                  height="100"
-                />
-              </li>
-              <li className="glide__slide">
-                <Image
-                  src="/swiftend-logo.svg"
-                  alt="swiftend"
-                  width="150"
-                  height="100"
-                />
-              </li>
-            </ul>
-          </div>
+      </motion.h3>
+      <div className="w-full">
+        <div className="flex justify-center items-center flex-wrap">
+          <PartnerLogo
+            src="/simplify-logo.svg"
+            alt="simplify"
+            animationDelay={0}
+          />
+          <PartnerLogo
+            src="/appzone-logo.svg"
+            alt="appzone"
+            animationDelay={0.5}
+          />
+          <PartnerLogo
+            src="/pennytree-logo.svg"
+            alt="pennytree"
+            animationDelay={1}
+          />
+          <PartnerLogo src="/3line-logo.svg" alt="3line" animationDelay={1.5} />
+          <PartnerLogo
+            src="/swiftend-logo.svg"
+            alt="swiftend"
+            animationDelay={2}
+          />
         </div>
       </div>
-      <div className="flex justify-center">
-        <Image src="/dashboard.svg" alt="SmartcomplyApp dashboard" width="800" height="600" />
-      </div>
+      <motion.div
+        className="flex justify-center border relative"
+        initial={{ opacity: 0, y: "96px", x: "-10vh" }}
+        animate={imageControls}
+        onViewportLeave={handleImageAnimations().onLeaveViewport}
+        onViewportEnter={handleImageAnimations().onEnterViewport}
+      >
+        <Image
+          src="/dashboard.svg"
+          alt="SmartcomplyApp dashboard"
+          width="800"
+          height="600"
+        />
+      </motion.div>
       <div className="flex flex-col justify-between items-center lg:flex-row">
         <div className="w-full lg:w-11/12 lg:mr-10">
           <p
