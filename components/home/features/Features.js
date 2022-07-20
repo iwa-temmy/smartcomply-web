@@ -1,9 +1,13 @@
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+
 import styles from "../../../styles/Home.module.css";
 import Button from "../../button/Button";
+import FeatureItem from "./FeatureItem";
 import PartnerLogo from "./PartnerLogo";
+
+import { features } from "data";
 
 const Features = () => {
   // animation controls
@@ -12,19 +16,17 @@ const Features = () => {
   // animation functions
   const handleImageAnimations = () => {
     const onEnterViewport = () => {
-      console.log("entering viewport");
       imageControls.start({
         opacity: 1,
         y: 0,
         x: 0,
         transition: {
           type: "tween",
-          duration: 1
+          duration: 0.8
         }
       });
     };
     const onLeaveViewport = entry => {
-      console.log("leaving viewport");
       const y = entry?.boundingClientRect?.y > 0 ? "96px" : "-96px";
       imageControls.start({
         opacity: 0,
@@ -32,14 +34,14 @@ const Features = () => {
         x: "-10vh",
         transition: {
           type: "tween",
-          duration: 1
+          duration: 0.8
         }
       });
     };
     return { onEnterViewport, onLeaveViewport };
   };
   return (
-    <section className="px-8 py-8 font-semibold lg:px-20 container">
+    <section className="px-8 py-8 font-semibold lg:px-4 container">
       <motion.h3
         className={`${styles.infrastructure_description} text-center text-lg font-medium md:text-xl`}
         initial={{ opacity: 0, x: "-5vw" }}
@@ -48,7 +50,7 @@ const Features = () => {
           x: 0,
           transition: {
             type: "tween",
-            duration: 1
+            duration: 0.8
           }
         }}
       >
@@ -80,7 +82,7 @@ const Features = () => {
         </div>
       </div>
       <motion.div
-        className="flex justify-center border relative"
+        className="flex justify-center"
         initial={{ opacity: 0, y: "96px", x: "-10vh" }}
         animate={imageControls}
         onViewportLeave={handleImageAnimations().onLeaveViewport}
@@ -94,27 +96,47 @@ const Features = () => {
         />
       </motion.div>
       <div className="flex flex-col justify-between items-center lg:flex-row">
-        <div className="w-full lg:w-11/12 lg:mr-10">
-          <p
-            className={`${styles.infrastructure_description} my-8 text-lg lg:text-xl`}
+        <div className="w-full sm:w-11/12 sm:mr-10 pb-5 text-center sm:text-left">
+          <motion.p
+            className={`${styles.infrastructure_description} my-8 text-lg sm:text-xl font-bold leading-tight`}
+            initial={{ opacity: 0, x: "-10vw" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
             Your all-in-one compliance solution suite helping you consolidate
             your compliance process end-to-end at a very affordable rate with
             monthly spaced payment.
-          </p>
-          <p className={`my-8 text-lg lg:text-xl font-semibold`}>
+          </motion.p>
+          <motion.p
+            className={`mt-9 mb-5 text-lg sm:text-base font-medium`}
+            initial={{ opacity: 0, x: "-10vw" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             Find out why smart businesses trust us
-          </p>
+          </motion.p>
 
-          <div className="flex justify-center lg:justify-start">
+          <motion.div
+            className="flex justify-center sm:justify-start"
+            initial={{ opacity: 0, x: "-10vw" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <Button
               name="schedule a free demo"
               styles={styles?.infrastructureButton}
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="w-11/12">
-          <Image src="/features.svg" width="700" alt="features" height="500" />
+        <div className="w-full grid-cols-1 grid sm:grid-cols-2 justify-items-center justify-center">
+          {features.map((item, index) => (
+            <FeatureItem
+              icon={<item.Icon />}
+              text={item.text}
+              key={item.id}
+              index={(index + 1) / 2}
+            />
+          ))}
         </div>
       </div>
     </section>

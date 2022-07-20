@@ -30,14 +30,31 @@
   color: #0e2c66;
 }
 
+.featureItem {
+  max-width: 250px;
+  color: var(--primary-color);
+  transition: color 0.3s, background-color 0.3s;
+  cursor: auto;
+}
+.featureItem span:first-child {
+  transition: color 0.3s, border-color 0.3;
+  border-color: var(---primary-color);
+}
+.featureItem:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.featureIcon:hover span:first-child {
+  border-color: #fff;
+}
+.featureIcon {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+}
+
 .how_it_works {
   background-color: rgba(5, 222, 236, 0.3);
   color: #0e2c66;
   font-weight: 600;
-}
-
-@media only screen and (max-width: 768px) {
-  /* .hero {
-    height: 95vh;
-  } */
 }
