@@ -41,7 +41,7 @@ const Features = () => {
     return { onEnterViewport, onLeaveViewport };
   };
   return (
-    <section className="px-8 py-8 font-semibold lg:px-4 container">
+    <section className="px-8 py-8 font-semibold md:py-20 md:px-4 container">
       <motion.h3
         className={`${styles.infrastructure_description} text-center text-lg font-medium md:text-xl`}
         initial={{ opacity: 0, x: "-5vw" }}
@@ -82,7 +82,7 @@ const Features = () => {
         </div>
       </div>
       <motion.div
-        className="flex justify-center"
+        className="flex justify-center md:py-10"
         initial={{ opacity: 0, y: "96px", x: "-10vh" }}
         animate={imageControls}
         onViewportLeave={handleImageAnimations().onLeaveViewport}
@@ -95,7 +95,7 @@ const Features = () => {
           height="600"
         />
       </motion.div>
-      <div className="flex flex-col justify-between items-center lg:flex-row">
+      <div className="flex flex-col justify-between items-center lg:flex-row py-16">
         <div className="w-full sm:w-11/12 sm:mr-10 pb-5 text-center sm:text-left">
           <motion.p
             className={`${styles.infrastructure_description} my-8 text-lg sm:text-xl font-bold leading-tight`}

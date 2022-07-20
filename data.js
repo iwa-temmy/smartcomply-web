@@ -27,6 +27,36 @@ export const features = [
     Icon: IoDiamondOutline
   }
 ];
+export const steps = [
+  {
+    id: "01",
+    image: "/onboarding.png",
+    title: "Get Onboarded",
+    description:
+      "With SMARTCOMPLY'S technical compliance advisors, you can enjoy seamless onboarding and pre-audit of your infrastructure for FREE.This one time support helps you acquainted with the platform through a hand-held process by our advisors."
+  },
+  {
+    id: "02",
+    image: "/onboarding.png",
+    title: "Connect Your Technology Stack",
+    description:
+      "Integrate all your technology stack into SMARTCOMPLY and allow the platform continuously monitor your infrastructure and collect evidence for compliance."
+  },
+  {
+    id: "03",
+    image: "/onboarding.png",
+    title: "Track The Status Of Your Compliance",
+    description:
+      "SMARTCOMPLY tracks the status of your compliance and security posture by continuously mapping all scans and evidence to all compliance regulations."
+  },
+  {
+    id: "04",
+    image: "/onboarding.png",
+    title: "Get Notified Of Audit",
+    description:
+      "With access to numerous partner auditors, based on your compliance status, smart comply tells you which audit you are ready for and manages your audit timeline."
+  }
+];
 
 export const auditsProcesses = [
   {
