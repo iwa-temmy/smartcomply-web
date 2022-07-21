@@ -62,7 +62,7 @@ const BlogPostCard = props => {
       <motion.span
         animate={animationControl}
         ref={animationRef}
-        initial={{ y: "10vh", opacity: 0 }}
+        initial={{ y: "5vh", opacity: 0 }}
       >
         <div
           dangerouslySetInnerHTML={{ __html: post.description }}
@@ -73,6 +73,7 @@ const BlogPostCard = props => {
           <img
             src={getImageURL(post.thumbnail) || "/blogImage.png"}
             className="w-full block h-56 object-cover "
+            alt="post image"
           />
           <div
             className={`text-xs flex justify-between font-semibold mt-2 mb-1 ${styles.primaryText}`}
