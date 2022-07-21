@@ -1,5 +1,4 @@
 import styles from "../../../styles/Home.module.css";
-import Image from "next/image";
 import { steps } from "data";
 import StepItem from "./StepItem";
 import { useRef } from "react";

@@ -5,11 +5,19 @@ import Link from "next/link";
 import Button from "../../button/Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function Nav() {
+export default function Nav({ openModal }) {
   const [navToggle, setNavToggle] = useState(false);
 
   const openNavMenu = () => {
     setNavToggle(!navToggle);
+  };
+  const closeMenu = () => {
+    setNavToggle(false);
+  };
+
+  const openRequestDemoModal = () => {
+    openModal();
+    closeMenu();
   };
   return (
     <header className={`${styles.nav} absolute w-full bg-transparent z-10`}>

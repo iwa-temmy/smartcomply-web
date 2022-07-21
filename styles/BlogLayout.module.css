@@ -13,6 +13,9 @@
 .smScreenBlogNav {
   background-color: rgb(236.7, 236, 234.7);
 }
+.searchInput{
+  box-shadow: none !important;
+}
 .dropdownOpen {
   height: 325px;
 }

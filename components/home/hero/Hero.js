@@ -61,7 +61,7 @@ const Hero = () => {
         >
           <Image
             src="/hero.svg"
-            width="1000"
+            width="900"
             height="900"
             alt="SmartcomplyApp Dashboard"
             layout="responsive"

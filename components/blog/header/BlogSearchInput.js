@@ -1,7 +1,9 @@
 import React from "react";
 
+
 // icons
 import { BiSearch } from "react-icons/bi";
+import styles from "styles/BlogLayout.module.css";
 
 const BlogSearchInput = props => {
   const { className, onChange, value } = props;
@@ -15,7 +17,7 @@ const BlogSearchInput = props => {
         name="search"
         id="search"
         placeholder="Search"
-        className="outline-none w-full bg-transparent"
+        className={`w-full bg-transparent border-0 outline-0 ${styles.searchInput}`}
         onChange={onChange}
         value={value}
       />
