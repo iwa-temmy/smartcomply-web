@@ -16,6 +16,7 @@
   height: 95vh;
 }
 
+/* features */
 .featureItem {
   max-width: 250px;
   color: var(--primary-color);
@@ -39,6 +40,7 @@
   height: 30px;
 }
 
+/* how it works */
 .how_it_works {
   color: #0e2c66;
   background-image: url("../public/hero.png");
@@ -74,6 +76,14 @@
 }
 .infraCard {
   width: 200px;
+}
+
+/* audits */
+.auditCard {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.auditPartners {
+  background-color: rgba(24, 92, 197, 0.24);
 }
 
 /* media query for all */

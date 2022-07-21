@@ -47,11 +47,11 @@ const Features = () => {
         initial={{ opacity: 0, x: "-5vw" }}
         whileInView={{
           opacity: 1,
-          x: 0,
-          transition: {
-            type: "tween",
-            duration: 0.8
-          }
+          x: 0
+        }}
+        transition={{
+          type: "tween",
+          duration: 0.8
         }}
       >
         Fast-growing brands that trust us

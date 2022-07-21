@@ -88,3 +88,9 @@ export const auditsProcesses = [
       "Easily manage information risks, such as cyber-attacks, hacks, data leaks or theft by staying compliant at all times with the ISO 27001 international compliance standard."
   }
 ];
+
+export const auditPartners = [
+  { id: 1, image: "/infoprive-logo.svg", name: "infoprive" },
+  { id: 2, image: "/techhive-logo.svg", name: "techhive" },
+  { id: 3, image: "/platview-logo.svg", name: "platview" }
+];
