@@ -23,7 +23,7 @@ const StepItem = props => {
   const { title, image, description, index, container } = props;
   return (
     <motion.article
-      className="grid grid-cols-1 lg:grid-cols-2 items-center flex-col justify-center lg:justify-between lg:flex-row relative pt-20 mt-24 p-10 lg:p-4"
+      className="grid grid-cols-1 lg:grid-cols-2 items-center flex-col justify-center lg:justify-between lg:flex-row relative pt-10 lg:pt-20 mt-24 p-10 lg:p-4"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.9, root: container }}
@@ -34,12 +34,14 @@ const StepItem = props => {
       >
         {index}
       </span>
-      <div className="mx-auto my-10 relative z-10 flex justify-center items-center max-w-sm">
+      <div className="mx-auto lg:my-10 relative z-10 flex justify-center items-center max-w-sm">
         <img src={image} alt={title} />
       </div>
       <div className="text-center lg:text-left  max-w-lg">
-        <h2 className="capitalize text-3xl my-5">{title}</h2>
-        <p className="">{description}</p>
+        <h2 className="capitalize text-2xl md:text-3xl my-5 font-bold">
+          {title}
+        </h2>
+        <p className="lg:text-2xl text-base">{description}</p>
       </div>
     </motion.article>
   );

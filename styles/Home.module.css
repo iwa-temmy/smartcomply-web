@@ -16,11 +16,6 @@
   height: 95vh;
 }
 
-.audit_process {
-  background-color: #0e2c66;
-  font-weight: 600;
-}
-
 .featureItem {
   max-width: 250px;
   color: var(--primary-color);
@@ -46,7 +41,6 @@
 
 .how_it_works {
   color: #0e2c66;
-  font-weight: 600;
   background-image: url("../public/hero.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -70,9 +64,10 @@
 }
 .stepNumber {
   color: #ebedf580;
-  font-size: 200px;
+  font-size: 100px;
 }
 
+/* infrastructures */
 .infrastructureButton {
   background-color: #0e2c66;
   color: #fff;
@@ -80,7 +75,12 @@
 .infraCard {
   width: 200px;
 }
-@media screen and (minwidth: 1024px) {
+
+/* media query for all */
+@media screen and (min-width: 1024px) {
+  .stepNumber {
+    font-size: 200px;
+  }
   .infraCard {
     max-width: 28%;
   }

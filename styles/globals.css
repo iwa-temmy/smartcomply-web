@@ -35,6 +35,9 @@ a {
 .primary-border {
   border-color: var(--primary-color);
 }
+.bg-primary {
+  background-color: var(--primary-color);
+}
 
 .container {
   width: 100%;
