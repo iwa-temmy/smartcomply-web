@@ -1,4 +1,4 @@
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import SelectInput from "components/inputs/SelectInput";
 import { useNotification } from "react-hook-notification";
 import Input from "components/inputs/Input";
@@ -8,38 +8,37 @@ const RequestDemoModal = ({ open, closeModal }) => {
   const [formData, setFormData] = useState({});
 
   //Ref input
-  const emailInput = useRef(null)
+  const emailInput = useRef(null);
   //notificcation
   const notification = useNotification();
 
-
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { value, name } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   //Handle Demo Request
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     console.log(formData);
     fetch("https://api.smartcomplyapp.com/api/landing_page/demo/", {
       method: "POST",
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        "Content-type": "application/json; charset=UTF-8"
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         if (data?.status) {
           closeModal();
-          setFormData({})
+          setFormData({});
           notification.success({
             text: "Successful request, you will be contacted shortly"
-          })
+          });
         }
       })
-      .catch((err) => {
-        console.log(err)
+      .catch(err => {
+        console.log(err);
       });
   };
   return (
@@ -73,7 +72,7 @@ const RequestDemoModal = ({ open, closeModal }) => {
           </button>
           <div className="py-6 px-6 lg:px-8">
             <h3
-              className={`${styles.infrastructure_description} mb-4 text-xl font-medium text-gray-900 uppercase dark:text-white`}
+              className={`primary-text mb-4 text-xl font-medium text-gray-900 uppercase dark:text-white`}
             >
               Book a Demo
             </h3>

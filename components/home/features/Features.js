@@ -43,7 +43,7 @@ const Features = () => {
   return (
     <section className="px-8 py-8 font-semibold md:py-20 md:px-4 container">
       <motion.h3
-        className={`${styles.infrastructure_description} text-center text-lg font-medium md:text-xl`}
+        className={`primary-text text-center text-lg font-medium md:text-xl`}
         initial={{ opacity: 0, x: "-5vw" }}
         whileInView={{
           opacity: 1,
@@ -98,7 +98,7 @@ const Features = () => {
       <div className="flex flex-col justify-between items-center lg:flex-row py-16">
         <div className="w-full sm:w-11/12 sm:mr-10 pb-5 text-center sm:text-left">
           <motion.p
-            className={`${styles.infrastructure_description} my-8 text-lg sm:text-xl font-bold leading-tight`}
+            className={`primary-text my-8 text-lg sm:text-xl font-bold leading-tight`}
             initial={{ opacity: 0, x: "-10vw" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
