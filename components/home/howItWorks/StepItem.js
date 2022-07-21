@@ -1,12 +1,34 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 import styles from "styles/Home.module.css";
 
+const cardVariants = {
+  offscreen: {
+    y: -40,
+    scale: 0.7
+  },
+  onscreen: {
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "tween",
+      duration: 0.8
+    }
+  }
+};
+
 const StepItem = props => {
-  const { title, image, description, index } = props;
+  const { title, image, description, index, container } = props;
   return (
-    <article className="grid grid-cols-1 lg:grid-cols-2 items-center flex-col justify-center lg:justify-between lg:flex-row relative pt-20 mt-24 p-4">
+    <motion.article
+      className="grid grid-cols-1 lg:grid-cols-2 items-center flex-col justify-center lg:justify-between lg:flex-row relative pt-20 mt-24 p-10 lg:p-4"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.6, root: container }}
+      variants={cardVariants}
+    >
       <span
         className={`absolute top-0 left-0 text-9xl ${styles.stepNumber} font-extrabold`}
       >
@@ -19,7 +41,7 @@ const StepItem = props => {
         <h2 className="capitalize text-3xl my-5">{title}</h2>
         <p className="">{description}</p>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

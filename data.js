@@ -37,21 +37,21 @@ export const steps = [
   },
   {
     id: "02",
-    image: "/onboarding.png",
+    image: "/technology.png",
     title: "Connect Your Technology Stack",
     description:
       "Integrate all your technology stack into SMARTCOMPLY and allow the platform continuously monitor your infrastructure and collect evidence for compliance."
   },
   {
     id: "03",
-    image: "/onboarding.png",
+    image: "/server-status.png",
     title: "Track The Status Of Your Compliance",
     description:
       "SMARTCOMPLY tracks the status of your compliance and security posture by continuously mapping all scans and evidence to all compliance regulations."
   },
   {
     id: "04",
-    image: "/onboarding.png",
+    image: "/audit-notification.png",
     title: "Get Notified Of Audit",
     description:
       "With access to numerous partner auditors, based on your compliance status, smart comply tells you which audit you are ready for and manages your audit timeline."
