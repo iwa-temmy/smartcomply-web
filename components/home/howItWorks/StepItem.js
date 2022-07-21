@@ -7,7 +7,7 @@ import styles from "styles/Home.module.css";
 const cardVariants = {
   offscreen: {
     y: -40,
-    scale: 0.7
+    scale: 0.5
   },
   onscreen: {
     y: 0,
@@ -26,7 +26,7 @@ const StepItem = props => {
       className="grid grid-cols-1 lg:grid-cols-2 items-center flex-col justify-center lg:justify-between lg:flex-row relative pt-20 mt-24 p-10 lg:p-4"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.6, root: container }}
+      viewport={{ amount: 0.9, root: container }}
       variants={cardVariants}
     >
       <span

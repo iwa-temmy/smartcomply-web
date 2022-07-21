@@ -21,15 +21,6 @@
   font-weight: 600;
 }
 
-.infrastructureButton {
-  background-color: #0e2c66;
-  color: #fff;
-}
-
-.infrastructure_description {
-  color: #0e2c66;
-}
-
 .featureItem {
   max-width: 250px;
   color: var(--primary-color);
@@ -80,4 +71,17 @@
 .stepNumber {
   color: #ebedf580;
   font-size: 200px;
+}
+
+.infrastructureButton {
+  background-color: #0e2c66;
+  color: #fff;
+}
+.infraCard {
+  width: 200px;
+}
+@media screen and (minwidth: 1024px) {
+  .infraCard {
+    max-width: 28%;
+  }
 }
