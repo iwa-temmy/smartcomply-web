@@ -30,14 +30,54 @@
   color: #0e2c66;
 }
 
-.how_it_works {
-  background-color: rgba(5, 222, 236, 0.3);
-  color: #0e2c66;
-  font-weight: 600;
+.featureItem {
+  max-width: 250px;
+  color: var(--primary-color);
+  transition: color 0.3s, background-color 0.3s;
+  cursor: auto;
+}
+.featureItem span:first-child {
+  transition: color 0.3s, border-color 0.3;
+  border-color: var(---primary-color);
+}
+.featureItem:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.featureIcon:hover span:first-child {
+  border-color: #fff;
+}
+.featureIcon {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-@media only screen and (max-width: 768px) {
-  /* .hero {
-    height: 95vh;
-  } */
+.how_it_works {
+  color: #0e2c66;
+  font-weight: 600;
+  background-image: url("../public/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.parallaxScroller {
+  overflow: auto;
+  height: 100vh;
+}
+.parallaxScroller::-webkit-scrollbar {
+  width: 10px;
+  margin: 2px;
+}
+.parallaxScroller::-webkit-scrollbar-thumb {
+  background: #ffffff80;
+  border-radius: 10px;
+}
+.parallaxScroller header {
+  background-color: rgba(14, 44, 102, 0.24);
+}
+.stepNumber {
+  color: #ebedf580;
+  font-size: 200px;
 }

@@ -21,7 +21,7 @@ const PartnerLogo = props => {
         opacity: 1,
         transition: {
           type: "tween",
-          duration: 1,
+          duration: 0.8,
           delay: 0.3 * animationDelay
         }
       });
