@@ -13,7 +13,7 @@
 .smScreenBlogNav {
   background-color: rgb(236.7, 236, 234.7);
 }
-.searchInput{
+.searchInput {
   box-shadow: none !important;
 }
 .dropdownOpen {
@@ -53,9 +53,6 @@
 
 /* FOR EACH POST PAGE */
 /* header */
-.shareBar {
-  top: 15%;
-}
 .postContent h3 {
   display: none;
 }

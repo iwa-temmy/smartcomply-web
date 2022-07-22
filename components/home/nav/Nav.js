@@ -41,16 +41,20 @@ export default function Nav({ openModal }) {
           } flex flex-col bg-slate-500 transition-all duration-100 absolute top-24 h-80 sm:flex sm:flex-row items-center sm:bg-inherit sm:relative sm:top-0 sm:h-fit sm:translate-x-0 sm:items-center`}
         >
           <span className="my-8 sm:mr-10 text-white uppercase sm:my-4">
-            <Link href="https://app.smartcomplyapp.com/auth/login">
-              <a>Sign in</a>
+            <Link href="/blog">
+              <a>Blog</a>
             </Link>
           </span>
           <span className="my-8 sm:mr-10 text-white uppercase sm:my-4">
             <Link href="https://app.smartcomplyapp.com/auth/login">
-              <a>Blog</a>
+              <a>Sign in</a>
             </Link>
           </span>
-          <Button name="Book Demo" styles={styles?.button} />
+          <Button
+            name="Book Demo"
+            styles={styles?.button}
+            buttonAction={openRequestDemoModal}
+          />
         </nav>
       </div>
     </header>

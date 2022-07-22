@@ -29,7 +29,7 @@ const Post = props => {
   return (
     <BlogLayout title={post.title}>
       <motion.main
-        className="px-3 py-2 md:py-8 md:px-20 relative"
+        className="px-3 py-2 md:py-8 md:px-20 relative container"
         initial="hidden"
         animate="visible"
         variants={{
