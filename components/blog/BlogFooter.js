@@ -62,16 +62,16 @@ const BlogFooter = () => {
             Copyright SMARTCOMPLY 2022 | All Rights Reserved
           </span>
           <div className="socials flex justify-end items-center mt-5 sm:m-0 ">
-            <SocialLink href="#">
+            <SocialLink href="https://twitter.com/smartcomplyapp?s=21&t=plrz_5SKZo_eZz0EFKLRLg">
               <BsTwitter />
             </SocialLink>
-            <SocialLink href="#">
+            <SocialLink href="https://m.facebook.com/smartcomplyapp/">
               <FaFacebookF />
             </SocialLink>
-            <SocialLink href="#">
+            <SocialLink href="https://instagram.com/smartcomplyapp?igshid=YmMyMTA2M2Y=">
               <AiFillInstagram />
             </SocialLink>
-            <SocialLink href="#">
+            <SocialLink href="https://www.linkedin.com/company/smartcomplyapp/">
               <FaLinkedinIn />
             </SocialLink>
           </div>
@@ -81,9 +81,9 @@ const BlogFooter = () => {
   );
 };
 
-const SocialLink = ({ children }) => {
+const SocialLink = ({ children, href }) => {
   return (
-    <a href="#" className="m-2 text-white text-xl">
+    <a href={href} className="m-2 text-white text-xl">
       {children}
     </a>
   );

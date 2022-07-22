@@ -2,7 +2,8 @@ import Button from "../../button/Button";
 import styles from "styles/Home.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
-const Hero = () => {
+const Hero = props => {
+  const { openModal } = props;
   return (
     <main className={`${styles.hero} flex items-center justify-center`}>
       <div className="container flex items-center flex-col py-10 md:py-5 lg:flex-row lg:py-12 px-4">
@@ -43,7 +44,11 @@ const Hero = () => {
             }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <Button name="schedule a free demo" styles={styles.button} />
+            <Button
+              name="schedule a free demo"
+              styles={styles.button}
+              buttonAction={openModal}
+            />
           </motion.div>
         </div>
         <motion.div
