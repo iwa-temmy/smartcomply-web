@@ -25,9 +25,9 @@ const Blog = props => {
         setFilters={setFilters}
         allCategories={allCategories}
       />
-      <main className="px-5 py-2 md:py-8 md:px-20">
-        <section className="my-5">
-          <div className="grid grid-cols-1 gap-y-16 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 xl:gap-x-8 ">
+      <main className="py-2 md:py-16 container">
+        <section className="my-5 px-5">
+          <div className="grid grid-cols-1 gap-y-16 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 lg:gap-x-10 ">
             {posts.items.map(post => {
               const shouldShow = filterMatch(filters, post);
               const postId = post.guid.split("/").slice(-1)[0];

@@ -39,7 +39,7 @@ const BlogPostsListHeader = props => {
 
   return (
     <>
-      <header className="hidden md:flex justify-between items-center px-10 md:px-20">
+      <header className="hidden md:flex justify-between items-center container mt-5">
         <h2 className={`uppercase text-lg font-medium ${styles.primaryText}`}>
           latest blog posts
         </h2>

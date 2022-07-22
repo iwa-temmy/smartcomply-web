@@ -41,7 +41,8 @@ a {
 
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 576px) {
   .container {
