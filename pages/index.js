@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
 //Components
 import Nav from "../components/home/nav/Nav";
@@ -9,6 +8,8 @@ import Infrastructures from "../components/home/Infrastructures/Infrastructures"
 import HowItWorks from "../components/home/howItWorks/HowItWorks";
 import Features from "../components/home/features/Features";
 import RequestDemoModal from "components/modal/RequestDemoModal";
+import HeadComponent from "components/HeadComponent";
+
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import AOS from "aos";
 export default function Home() {
@@ -25,23 +26,12 @@ export default function Home() {
     AOS.init({
       delay: 300, // values from 0 to 3000, with step 50ms
       duration: 400, // values from 0 to 3000, with step 50ms
-      easing: "ease-in-out", // default easing for AOS animations
+      easing: "ease-in-out" // default easing for AOS animations
     });
   }, []);
   return (
     <div>
-      <Head>
-        <title>SmartComply</title>
-        <meta
-          name="description"
-          content="SmartComply your number one smart compliance platform"
-        />
-        <meta
-          name="keywords"
-          content="SmartComply, compliance, Soc2, Pcidss, Ndpr, Iso270001, Cybersecurity, Compliance platform in Nigeria, first compliance platform in Africa"
-        />
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
+      <HeadComponent title="SmartComply" />
       <Nav openModal={openDemoFormModal} />
       <Hero openModal={openDemoFormModal} />
       <Features openModal={openDemoFormModal} />

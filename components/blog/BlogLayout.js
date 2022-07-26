@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import BlogFooter from "./BlogFooter";
-import BlogHeadComponent from "./BlogHeadComponent";
+import HeadComponent from "../HeadComponent";
 import BlogHeader from "./BlogHeader";
 
 import styles from "styles/BlogLayout.module.css";
@@ -17,7 +17,7 @@ const BlogLayout = props => {
       variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
       transition={{ duration: 0.8 }}
     >
-      <BlogHeadComponent title={title} />
+      <HeadComponent title={title} />
       <BlogHeader />
       {children}
       <BlogFooter />
